@@ -37,6 +37,10 @@ modules:
         - firefox-langpacks
         - kde-partitionmanager
         - plasma-discover
+        - plasma-discover-flatpak
+        - plasma-discover-kns
+        - plasma-discover-notifier
+        - plasma-discover-rpm-ostree
 
   - type: script
     scripts:
