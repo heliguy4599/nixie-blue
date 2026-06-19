@@ -21,3 +21,5 @@ dnf5 -y install \
 	pipewire-libs-extra \
 	x264-libs \
 	x265-libs
+
+dnf autoremove -y
