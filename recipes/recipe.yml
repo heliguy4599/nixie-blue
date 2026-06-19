@@ -13,12 +13,6 @@ modules:
       - source: system
         destination: /
 
-  - type: os-release
-    properties:
-      ID: nixie_blue
-      NAME: NixieBlue
-      PRETTY_NAME: Nixie Blue
-
   - type: script
     scripts:
       - install-kde-rounded.sh
@@ -70,5 +64,11 @@ modules:
         notify: false
         install:
           - io.github.flattool.Warehouse
+
+  - type: os-release
+    properties:
+      ID: nixie_blue
+      NAME: NixieBlue
+      PRETTY_NAME: Nixie Blue
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
