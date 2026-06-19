@@ -39,7 +39,6 @@ modules:
         - helium-bin
         - input-remapper
         - nix
-        - steam
     remove:
       packages:
         - filelight
