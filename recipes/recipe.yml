@@ -30,15 +30,12 @@ modules:
         - imput/helium
     install:
       packages:
-        - install-weak-deps: false # for Steam
-          packages:
-            - steam
-            - kernel-modules-extra # for Steam
         - distrobox
         - gnome-disk-utility
         - helium-bin
         - input-remapper
         - nix
+        - steam
     remove:
       packages:
         - filelight
