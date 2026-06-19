@@ -19,17 +19,24 @@ modules:
       PRETTY_NAME: Nixie Blue
 
   - type: dnf
-    # repos:
-    #   copr:
-    #     - atim/starship
+    repos:
+      copr:
+        - imput/helium
     install:
       packages:
-        - nix
         - distrobox
+        - gnome-disk-utility
+        - helium-bin
+        - input-remapper
+        - nix
+        - steam
     remove:
       packages:
+        - filelight
         - firefox
         - firefox-langpacks
+        - kde-partitionmanager
+        - plasma-discover
 
   - type: script
     scripts:
@@ -42,6 +49,13 @@ modules:
         - nix.mount
         - nix-store-init.service
         - nix-daemon.service
+        - input-remapper.service
         - rpm-ostreed-automatic.timer
+
+  - type: default-flatpaks
+    configurations:
+      - scope: system
+        install:
+          - io.github.flattool.Warehouse
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
