@@ -22,11 +22,6 @@ modules:
       NAME: NixieBlue
       PRETTY_NAME: Nixie Blue
 
-  - type: script
-    scripts:
-      - install-kde-rounded.sh
-      - aurora-codecs.sh
-
   - type: dnf
     # repos:
     #   copr:
@@ -36,6 +31,11 @@ modules:
         - nix
         - distrobox
         # - papirus-icon-theme
+
+  - type: script
+    scripts:
+      - install-kde-rounded.sh
+      - aurora-codecs.sh
 
     remove:
       packages:
