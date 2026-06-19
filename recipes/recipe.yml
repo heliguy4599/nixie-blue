@@ -52,7 +52,7 @@ modules:
 
   - type: systemd
     system:
-      enable:
+      enabled:
         - nix.mount
         - nix-store-init.service
         - nix-daemon.service
