@@ -25,6 +25,7 @@ modules:
   - type: script
     scripts:
       - install-kde-rounded.sh
+      - aurora-codecs.sh
 
   - type: dnf
     # repos:
