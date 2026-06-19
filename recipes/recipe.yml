@@ -32,6 +32,7 @@ modules:
         - helium-bin
         - input-remapper
         - nix
+        - papirus-icon-theme
         - steam
     remove:
       packages:
