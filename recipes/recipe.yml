@@ -23,6 +23,7 @@ modules:
       - install-kde-rounded.sh
 
   - type: dnf
+    install-weak-deps: false # for Steam
     repos:
       nonfree: rpmfusion
       files:
@@ -37,8 +38,7 @@ modules:
         - input-remapper
         - kernel-modules-extra # for Steam
         - nix
-        - install-weak-deps: false # for Steam
-          packages: steam
+        - steam
     remove:
       packages:
         - filelight
