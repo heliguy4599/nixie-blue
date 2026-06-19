@@ -23,20 +23,21 @@ modules:
       - install-kde-rounded.sh
 
   - type: dnf
-    install-weak-deps: false # for Steam
     repos:
-      nonfree: rpmfusion
       files:
         - https://negativo17.org/repos/fedora-steam.repo
       copr:
         - imput/helium
     install:
       packages:
+        - install-weak-deps: false # for Steam
+          packages:
+            - steam
+            - kernel-modules-extra # for Steam
         - distrobox
         - gnome-disk-utility
         - helium-bin
         - input-remapper
-        - kernel-modules-extra # for Steam
         - nix
         - steam
     remove:
