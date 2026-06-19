@@ -18,8 +18,15 @@ modules:
       NAME: NixieBlue
       PRETTY_NAME: Nixie Blue
 
+  - type: script
+    scripts:
+      - install-kde-rounded.sh
+
   - type: dnf
     repos:
+      nonfree: rpmfusion
+      files:
+        - https://negativo17.org/repos/fedora-steam.repo
       copr:
         - imput/helium
     install:
@@ -28,8 +35,10 @@ modules:
         - gnome-disk-utility
         - helium-bin
         - input-remapper
+        - kernel-modules-extra # for Steam
         - nix
-        - steam
+        - install-weak-deps: false # for Steam
+          packages: steam
     remove:
       packages:
         - filelight
@@ -44,7 +53,6 @@ modules:
 
   - type: script
     scripts:
-      - install-kde-rounded.sh
       - aurora-codecs.sh
 
   - type: systemd
