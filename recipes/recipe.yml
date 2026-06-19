@@ -29,8 +29,10 @@ modules:
         - https://negativo17.org/repos/fedora-steam.repo
       copr:
         - imput/helium
+        - deltacopy/darkly
     install:
       packages:
+        - darkly
         - distrobox
         - gnome-disk-utility
         - helium-bin
