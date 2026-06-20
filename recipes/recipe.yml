@@ -49,7 +49,6 @@ modules:
   - type: script
     scripts:
       - aurora-codecs.sh
-      - install-megasync.sh
 
   - type: systemd
     system:
