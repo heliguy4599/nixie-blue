@@ -56,7 +56,7 @@ modules:
         - nix.mount
         - nix-store-init.service
         - nix-daemon.service
-        - nix-gc.timer
+        - nix-maintenance.timer
         - input-remapper.service
         - rpm-ostreed-automatic.timer
 
