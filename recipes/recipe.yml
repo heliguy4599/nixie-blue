@@ -34,7 +34,6 @@ modules:
         - nix
         - papirus-icon-theme
         - steam
-        - 'https://mega.nz/linux/repo/Fedora_44/x86_64/megasync-Fedora_44.x86_64.rpm'
     remove:
       packages:
         - filelight
@@ -50,6 +49,10 @@ modules:
   - type: script
     scripts:
       - aurora-codecs.sh
+
+  - type: rpm-ostree
+    install:
+      - 'https://mega.nz/linux/repo/Fedora_44/x86_64/megasync-Fedora_44.x86_64.rpm'
 
   - type: systemd
     system:
