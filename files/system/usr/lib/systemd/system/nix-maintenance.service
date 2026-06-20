@@ -1,0 +1,6 @@
+[Unit]
+Description=Nix garbage collection and store optimization
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c '/usr/bin/nix-collect-garbage -d && /usr/bin/nix store optimise'
