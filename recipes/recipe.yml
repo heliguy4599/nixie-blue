@@ -34,6 +34,12 @@ modules:
         - nix
         - papirus-icon-theme
         - steam
+
+        - virt-manager
+        - qemu-kvm
+        - libvirt-daemon
+        - libvirt-daemon-driver-qemu
+        - libvirt-daemon-config-network
     remove:
       packages:
         - filelight
@@ -59,6 +65,9 @@ modules:
         - nix-maintenance.timer
         - input-remapper.service
         - rpm-ostreed-automatic.timer
+
+        - virtqemud.socket
+        - virtnetworkd.socket
 
   - type: default-flatpaks
     configurations:
