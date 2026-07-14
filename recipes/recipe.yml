@@ -29,9 +29,8 @@ modules:
         - ffmpeg
         - gstreamer1-plugins-bad-freeworld
         - gstreamer1-plugins-ugly
-        - libavcodec-freeworld
         - mesa-va-drivers-freeworld
-        - mesa-vdpau-drivers-freeworld
+        - mesa-va-drivers-freeworld.i686
 
         # Mutlimedia
         - celluloid
@@ -60,6 +59,7 @@ modules:
         - virt-manager
     remove:
       packages:
+        - ffmpeg-free
         - filelight
         - firefox
         - firefox-langpacks
