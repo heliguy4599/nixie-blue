@@ -26,20 +26,31 @@ modules:
         - deltacopy/darkly
     install:
       packages:
-        - darkly
-        - distrobox
-        - gnome-disk-utility
+        # Mutlimedia
+        - celluloid
+        - gwenview
         - helium-bin
-        - input-remapper
-        - nix
-        - papirus-icon-theme
         - steam
 
-        - virt-manager
-        - qemu-kvm
+        # Themeing
+        - adw-gtk3-theme
+        - darkly
+        - elementary-icon-theme
+        - papirus-icon-theme
+
+        # Utilities
+        - distrobox
+        - gnome-calculator
+        - gnome-disk-utility
+        - input-remapper
+        - nix
+
+        # Virtualization
         - libvirt-daemon
-        - libvirt-daemon-driver-qemu
         - libvirt-daemon-config-network
+        - libvirt-daemon-driver-qemu
+        - qemu-kvm
+        - virt-manager
     remove:
       packages:
         - filelight
@@ -59,13 +70,12 @@ modules:
   - type: systemd
     system:
       enabled:
+        - input-remapper.service
         - nix.mount
         - nix-store-init.service
         - nix-daemon.service
         - nix-maintenance.timer
-        - input-remapper.service
         - rpm-ostreed-automatic.timer
-
         - virtqemud.socket
         - virtnetworkd.socket
 
