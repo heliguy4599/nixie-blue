@@ -25,13 +25,6 @@ modules:
         - deltacopy/darkly
     install:
       packages:
-        # Codecs
-        - ffmpeg
-        - gstreamer1-plugins-bad-freeworld
-        - gstreamer1-plugins-ugly
-        - mesa-va-drivers-freeworld
-        - mesa-va-drivers-freeworld.i686
-
         # Mutlimedia
         - celluloid
         - gwenview
@@ -59,7 +52,6 @@ modules:
         - virt-manager
     remove:
       packages:
-        - ffmpeg-free
         - filelight
         - firefox
         - firefox-langpacks
@@ -70,9 +62,10 @@ modules:
         - plasma-discover-notifier
         - plasma-discover-rpm-ostree
 
-  # - type: script
-  #   scripts:
-  #     - aurora-codecs.sh
+  - type: script
+    scripts:
+      # - aurora-codecs.sh
+      - rpm-fusion-codecs.sh
 
   - type: systemd
     system:
