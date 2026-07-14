@@ -19,13 +19,20 @@ modules:
 
   - type: dnf
     repos:
-      files:
-        - https://negativo17.org/repos/fedora-steam.repo
+      nonfree: rpmfusion
       copr:
         - imput/helium
         - deltacopy/darkly
     install:
       packages:
+        # Codecs
+        - ffmpeg
+        - gstreamer1-plugins-bad-freeworld
+        - gstreamer1-plugins-ugly
+        - libavcodec-freeworld
+        - mesa-va-drivers-freeworld
+        - mesa-vdpau-drivers-freeworld
+
         # Mutlimedia
         - celluloid
         - gwenview
@@ -63,9 +70,9 @@ modules:
         - plasma-discover-notifier
         - plasma-discover-rpm-ostree
 
-  - type: script
-    scripts:
-      - aurora-codecs.sh
+  # - type: script
+  #   scripts:
+  #     - aurora-codecs.sh
 
   - type: systemd
     system:
