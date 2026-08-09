@@ -15,7 +15,7 @@ modules:
 
   - type: script
     scripts:
-      - install-kde-rounded.sh
+      - install-kde-extras.sh
 
   - type: dnf
     repos:
@@ -64,7 +64,6 @@ modules:
 
   - type: script
     scripts:
-      # - aurora-codecs.sh
       - rpm-fusion-codecs.sh
 
   - type: systemd
